@@ -26,10 +26,13 @@ l2.sort();
 let distance = 0;
 
 for (let i = 0; i < l1.length; i++) {
+  // Calculate the distance between the current two elements
   current_distance = get_distance(l1[i], l2[i]);
+  // Increment the distance by the current distance
   distance += current_distance;
 }
 
+// Log the final distance value
 console.log(distance);
 
 function get_distance(i, j) {
@@ -45,5 +48,6 @@ function get_distance(i, j) {
     l = i;
   }
 
+  // Return the distance
   return l - s;
 }
